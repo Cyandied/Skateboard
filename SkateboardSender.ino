@@ -11,13 +11,9 @@
 
 #include <esp_now.h>
 #include <WiFi.h>
-#include <ezButton.h>
 
 // REPLACE WITH YOUR ESP RECEIVER'S MAC ADDRESS
 uint8_t broadcastAddress1[] = {0x34,0x86,0x5D,0x3B,0xEB,0xAC};
-
-#define BUTTON_PIN 17
-ezButton button(BUTTON_PIN);
 
 typedef struct test_struct {
   int power;
@@ -47,8 +43,6 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
  
 void setup() {
   Serial.begin(115200);
-
-  pinMode(17,INPUT);
 
   pinMode(VRX_PIN, INPUT);
   pinMode(VRY_PIN, INPUT);
