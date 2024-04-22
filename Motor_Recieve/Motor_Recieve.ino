@@ -11,7 +11,7 @@
 #include <Stepper.h>
 #include <esp_now.h>
 #include <WiFi.h>
-const int stepsPerRevolution = 2048;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 2048;
 #define IN1 16
 #define IN2 22
 #define IN3 21
